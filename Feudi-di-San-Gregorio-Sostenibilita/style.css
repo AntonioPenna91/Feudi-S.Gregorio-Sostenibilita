@@ -6,13 +6,20 @@
 * { box-sizing: border-box; }
 body, html { padding: 0; margin: 0; }
 
+
 /* RESET LISTE */
 /* Cambia 0 con il padding di default */
 ul {padding-inline-start: 0;}
 
+
 /*  BODY  */
 /* font predefinito per tutta la pagina  */
-body { font-family: Times New Roman;background-color: #6a6868f8 }
+body { font-family: Times New Roman;background-color: #878484f8 }
+
+
+/* CONTENITORE PRINCIPALE  */
+/* Spazio interno attorno al contenuto della pagina */
+.container {padding: 15px;} 
 
 
 /*  IMMAGINI  */
@@ -53,15 +60,10 @@ header li a { font-size: 20px; padding: 10px; }
 #menu-principale li a { color: #c9a96e; margin: 20px; }
 
 
-/* CONTENITORE PRINCIPALE  */
-/* Spazio interno attorno al contenuto della pagina */
-.container {
-     padding: 10px;   
-} 
-
 /* COVER PRINCIPALE */
 /* Sezione immagine grande con testo sovrapposto */ 
 .cover { position: relative; border-bottom: 10px solid #c9a96e; }
+
 
 /* Cover sovrapposta a aal cover principale */
 .cover-int {
@@ -84,6 +86,7 @@ header li a { font-size: 20px; padding: 10px; }
     border-bottom: 7px solid #76cf6e;
 }
 
+
 /* Immagine che riempie tutta la cover ridotta */
 .cover_small img { 
     width: 100%; 
@@ -91,6 +94,7 @@ header li a { font-size: 20px; padding: 10px; }
     object-fit: cover; /* ritaglia l'immagine per riempire il contenitore */
     border-radius: 8px; /* angoli arrotondati */            
 }   
+
 
 /* Cover sovrapposta alla cover_small */
 .cover_small-int {
@@ -115,6 +119,7 @@ header li a { font-size: 20px; padding: 10px; }
 .grid-int-sost > div { flex: 1; } /* ogni figlio occupa metà spazio */
 .grid-int-sost img { width: 100%; height: auto; } /* immagine adattiva */
 .grid-int-sost p { font-size: 20px; line-height: 1.4; }
+
 
 /* Sfondo alternato per le righe della pagina sostenibilità */
 .grid-int-sost:nth-child(odd)  { background-color: #5b7f4cb9; } /* righe dispari  */
@@ -184,5 +189,5 @@ footer p { color: #fff; }
     .logo { font-size: 45px; } /* logo più grande */
     h2, h3 { font-size: 35px; } /* titoli più grandi */
     header li a { font-size: 35px; } /* menu più grande */
-    .grid-int-sost p { font-size: 25px; line-height: 1.4; } /* testo sostenibilità più grande */
+    .grid-int-sost p { font-size: 28px; line-height: 1.4; } /* testo sostenibilità più grande */
 }
