@@ -36,6 +36,9 @@ p { color: #000; font-size: 25px; text-align: justify; }
 /* Colore dei titoli h1, h2, h3  */
 h1, h2, h3 { color: #fff; }
 
+/* Gestione dimensione e colore del titolo della cover interna */
+.cover-int h1 { color: #ffffff; }
+
 
 /* LINK */
 /* Rimozione sottolineatura e settaggio colore dei link */
@@ -62,20 +65,20 @@ header li a { font-size: 20px; padding: 10px; }
 
 /* COVER PRINCIPALE */
 /* Sezione immagine grande con testo sovrapposto */ 
-.cover { position: relative; border-bottom: 10px solid #c9a96e; }
-
+.cover { 
+    position: relative; /* crea un nuovo contesto di posizionamento */
+    border-bottom: 10px solid #c9a96e; /* separatore visivo dorato */
+}
 
 /* Cover sovrapposta alla cover principale */
 .cover-int {
     background-color: #394f122c; /* sfondo semi-trasparente */
-    position: absolute; /* si sovrappone all'immagine */
-    bottom: 0; /* ancorato in basso */
+    position: absolute; /* esce dal flusso normale del documento e si sovrappone all'immagine */
+    bottom: 0; /* ancorato in basso al genitore ".cover" */
     left: 0;
     width: 100%;
     padding: 5px;
 }
-.cover__int h1 { color: #fff; }
-.cover__int p  { color: #fff; font-size: 22px; }
 
 
 /* COVER RIDOTTA PAGINA SOSTENIBILITA' */
