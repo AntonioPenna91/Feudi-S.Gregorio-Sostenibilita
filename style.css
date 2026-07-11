@@ -60,7 +60,13 @@ header li a { font-size: 20px; padding: 10px; }
 /* Posizionamento Voci del menu e colore */
 #menu-principale { text-align: center; }
 #menu-principale li { display: inline; font-size: 20px; }
-#menu-principale li a { color: #c9a96e; margin: 20px; }
+#menu-principale li a { 
+    color: #c9a96e; 
+    margin: 20px; 
+    border: 2px solid #5b7f4cb9;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
 
 
 /* COVER PRINCIPALE */
@@ -87,7 +93,7 @@ header li a { font-size: 20px; padding: 10px; }
     position: relative; 
     height: 400px; 
     margin-bottom: 20px;
-    border: 5px solid #76cf6e;
+    border: 5px solid #5b7f4cb9;
     border-radius: 8px; /* angoli arrotondati */  
 }
 
