@@ -14,7 +14,7 @@ ul {padding-inline-start: 0;}
 
 /*  BODY  */
 /* font predefinito per tutta la pagina  */
-body { font-family: Times New Roman;background-color: #878484f8 }
+body { font-family: 'Times New Roman', Times, serif;;background-color: #878484f8 }
 
 
 /* CONTENITORE PRINCIPALE  */
@@ -37,7 +37,6 @@ header li a { font-size: 20px; padding: 10px; }
     letter-spacing: 2px;         /* spaziatura tra lettere */
     color: #c9a96e;              /* stesso oro già usato nel sito */
     padding: 12px 20px;
-    font-family: 'Times New Roman', serif;
 }
 
 /* MENU PRINCIPALE  */
@@ -83,7 +82,6 @@ footer p, footer a { color: #fff; font-size: 18px;}
 .cover { 
     position: relative; /* crea un nuovo contesto di posizionamento */
     border-bottom: 10px solid #c9a96e; /* separatore visivo dorato */
-    
 }
 
 /* Cover sovrapposta alla cover principale */
@@ -101,9 +99,8 @@ footer p, footer a { color: #fff; font-size: 18px;}
 /* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
     position: relative; 
-    /*height: 300px;*/
     margin-bottom: 20px;
-    border: 3px solid #5b7f4cb9;
+    border: 5px solid #5b7f4cb9;
     border-radius: 8px; /* angoli arrotondati */  
 }
 
@@ -121,11 +118,10 @@ footer p, footer a { color: #fff; font-size: 18px;}
 .cover_sost-int {
     background-color: #334a3238; /* sfondo semi-trasparente */
     position: absolute; /* si sovrappone all'immagine */
-    bottom: 0;
+    bottom: 0; /* ancorato in basso al genitore ".cover_sost" */
     left: 0;
     width: 100%;
     text-align: center;
-    
 }
 
 
