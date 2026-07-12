@@ -22,33 +22,6 @@ body { font-family: Times New Roman;background-color: #878484f8 }
 .container {padding: 8px;} 
 
 
-/*  IMMAGINI  */
-/* Le immagini occupano tutta la larghezza del loro contenitore */
-img { width: 100%; height: auto; }
-
-
-/* PARAGRAFI  */
-/* Stile del testo corrente: colore, dimensione e tipologia*/
-p { 
-    color: #000; 
-    font-size: 18px; 
-    /*text-align: justify; */
-}
-
-
-/*  TITOLI  */
-/* Colore dei titoli h1, h2, h3  */
-h1, h2, h3 { color: #fff; }
-
-/* Gestione dimensione e colore del titolo della cover interna */
-.cover-int h1 { color: #ffffff; }
-
-
-/* LINK */
-/* Rimozione sottolineatura e settaggio colore dei link */
-a { color: #fff; text-decoration: none; font-size: 25px;}
-
-
 /*  HEADER  */
 /* Colore e settaggio Barra di navigazione in alto */
 header { background: #333; padding: 10px 20px 10px 20px; width: 100%; }
@@ -57,20 +30,52 @@ header li a { font-size: 20px; padding: 10px; }
 
 /*  LOGO  */
 /* Posizionamento Nome azienda all' interno dell' header */
-.logo { text-align: center; width: 100%; display: block; font-size: 35px; }
-
+.logo { 
+    text-align: center; 
+    width: 100%; display: block; 
+    font-size: 35px; 
+    letter-spacing: 2px;         /* spaziatura tra lettere */
+    color: #c9a96e;              /* stesso oro già usato nel sito */
+    padding: 12px 20px;
+    font-family: 'Times New Roman', serif;
+}
 
 /* MENU PRINCIPALE  */
 /* Posizionamento Voci del menu e colore */
 #menu-principale { text-align: center; }
 #menu-principale li { display: inline; font-size: 20px; }
+/*layout delle voci del menu*/
 #menu-principale li a { 
-    color: #c9a96e; 
+    color: #b7b3b3;
     margin: 10px; 
-    border: 1px solid #b7b3b3;/*colore bordo opzioni menu*/
+    border: 1px solid #b7b3b3;
     border-radius: 8px;
     padding: 2px 6px;
 }
+
+/* LINK */
+/* Rimozione sottolineatura e settaggio colore dei link */
+a { color: #fff; text-decoration: none; font-size: 25px;}
+
+
+/*  IMMAGINI  */
+/* Le immagini occupano tutta la larghezza del loro contenitore */
+img { width: 100%; height: auto; }
+
+
+/*  TITOLI  */
+/* Colore dei titoli h1, h2, h3  */
+h1, h2, h3 { color: #fff; }
+
+
+/* PARAGRAFI  */
+/* Stile del testo corrente: colore, dimensione e tipologia*/
+p { color: #000; font-size: 20px; }
+
+
+/* FOOTER */
+footer { background: #333; padding: 16px; }
+footer p, footer a { color: #fff; font-size: 18px;}
 
 
 /* COVER PRINCIPALE */
@@ -78,6 +83,7 @@ header li a { font-size: 20px; padding: 10px; }
 .cover { 
     position: relative; /* crea un nuovo contesto di posizionamento */
     border-bottom: 10px solid #c9a96e; /* separatore visivo dorato */
+    
 }
 
 /* Cover sovrapposta alla cover principale */
@@ -88,11 +94,11 @@ header li a { font-size: 20px; padding: 10px; }
     left: 0;
     width: 100%;
     padding: 5px;
+    text-align: center;
 }
 
 
-/* COVER RIDOTTA PAGINA SOSTENIBILITA' */
-/* Cover più piccola usata nelle pagine interne */
+/* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
     position: relative; 
     /*height: 300px;*/
@@ -118,6 +124,7 @@ header li a { font-size: 20px; padding: 10px; }
     bottom: 0;
     left: 0;
     width: 100%;
+    text-align: center;
     
 }
 
@@ -126,10 +133,9 @@ header li a { font-size: 20px; padding: 10px; }
 /* Usata nella home e nella pagina cantina */
 .grid { display: flex; flex-wrap: wrap; }
 .col-grid { width: 33.33%; padding: 15px; }
-.col-grid p{ font-size: 20px; line-height: 1.2; } /* dimensioni testo */
 
 
-/* GRIGLIA A DUE COLONNE PAGINA SOSTENIBILITA' */
+/* GRIGLIA PAGINA SOSTENIBILITA' */
 /* testo + immagine affiancati */
 .grid-int-sost { 
     display: flex; 
@@ -140,8 +146,7 @@ header li a { font-size: 20px; padding: 10px; }
  }
 
 .grid-int-sost > div { flex: 1; } /* ogni figlio occupa metà spazio */
-.grid-int-sost img { width: 100%; height: auto; } /* immagine adattiva */
-.grid-int-sost p { font-size: 16px; line-height: 1.2; } /* dimensioni testo */
+.grid-int-sost p { font-size: 20px; line-height: 1.2; } /* dimensioni testo */
 
 
 /* Sfondo alternato per le righe della pagina sostenibilità */
@@ -167,63 +172,59 @@ header li a { font-size: 20px; padding: 10px; }
 }
 
 
-/* FOOTER */
-/* Settaggio Piè di pagina */
-footer { background: #333; padding: 16px; }
-footer p { color: #fff; }
-
-
 /* MEDIA QUERY  */
 
 /* MOBILE (fino a 767px)  */
 @media (max-width: 767px) { 
     #menu-principale li { display: block; padding: 5px ; } /* voci menu una sotto l'altra */
+    h1{ font-size: 24px; } /* dimensioni titolo */
+    h2,h3{ font-size: 20px;} /* dimensioni sottotitoli e paragrafi */
     header li a { font-size: 25px;} 
-    h1{ font-size: 22px; } /* dimensioni titolo */
-    h2,h3{ font-size: 18px; } /* dimensioni sottotitoli */
     .cover img { height: 300px; object-fit: cover; }/* cover ridotta */
     .col-grid{ width: 100%; } /* colonne a piena larghezza */
-    footer { background: #333; padding: 10px; }
-    footer p,a { color: #fff; font-size: 18px;}
 
-    /*Gestione Mobile specifica per pagina sostenibilità*/
+    /*Gestione Mobile per pagina sostenibilità*/
     .cover_sost{ height: 300px; object-fit: cover; }/* cover ridotta */
-    .cover_sost-int h1 { font-size: 22px; } /* titolo cover interno ridotto */
-    .cover_sost-int h2,h3 { font-size: 18px; } /* sottotitolo cover ridotto */
-    .grid-int-sost { display: block;  } /* colonne in verticale */
-    .grid-int-sost p { font-size: 18px;} /* testo sostenibilità più grande */
+    .grid-int-sost { display: block;} /* colonne in verticale */
+
 }
 
 /* TABLET (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .logo { font-size:40px; } /* logo più grande */
     h1 { font-size: 30px; } /* titolo medio */
+    h2,h3{ font-size: 26px;} /* dimensioni sottotitoli e paragrafi */
     header li a { font-size: 30px; } /* menu più grande */
     .col-grid { width: 50%; } /* due colonne invece di tre */
+
     /*Gestione specifica per pagina sostenibilità*/
-    .cover_sost-int h1 { font-size: 26px; } /* titolo cover interno ridotto */
     .grid-int-sost p { font-size: 22px; } /* testo sostenibilità più grande */
 }
 
 /* DESKTOP MEDIO (1024px - 1299px) */
 @media (min-width: 1024px) and (max-width: 1299px) {
-    .logo { font-size: 40px; } /* logo più grande */
-    h1 { font-size: 38px; } /* titolo grande */
-    h2, h3 { font-size: 35px; } /* titoli più grandi */
+    .logo { font-size:45px; } /* logo più grande */
+    h1 { font-size: 36px; } /* titolo grande */
+    h2, h3 { font-size: 32px; } /* titoli più grandi */
     header li a { font-size: 35px; } /* menu più grande */
+    p { font-size: 24px; }
+    .container { padding: 24px; }
+    .btn { font-size: 22px; } /* bottone più grande */
+
     /*Gestione specifica per pagina sostenibilità*/
-    .cover_sost-int h1 { font-size: 28px; } /* titolo cover interno ridotto */
-    .cover_sost-int h2, h3 { font-size: 24px; } /* sottotitoli cover ridotti */
     .grid-int-sost p { font-size: 26px; } /* testo sostenibilità più grande */
 }
 
 /* DESKTOP GRANDE (1300px e oltre) */
 @media (min-width: 1300px) {
-    .logo { font-size: 45px; } /* logo più grande */
-    h1 { font-size: 40px; } /* titolo grande */
-    h2, h3 { font-size: 35px; } /* titoli più grandi */
+    .logo { font-size: 50px; } /* logo più grande */
+    h1 { font-size: 42px; } /* titolo grande */
+    h2, h3 { font-size: 38px; } /* titoli più grandi */
     header li a { font-size: 40px; } /* menu più grande */
+    p { font-size: 28px; }
+    .container { padding: 30px; }
+    .btn { font-size: 24px; } /* bottone più grande */
+
     /*Gestione specifica per pagina sostenibilità*/
-    .cover_sost-int h1 { font-size: 30px; } /* titolo cover interno ridotto */
-    .cover_sost-int h2, h3 { font-size: 26px; } /* sottotitoli cover ridotti */
-    .grid-int-sost p { font-size: 28px;} /* testo sostenibilità più grande */
+    .grid-int-sost p { font-size: 30px;} /* testo sostenibilità più grande */
 }
