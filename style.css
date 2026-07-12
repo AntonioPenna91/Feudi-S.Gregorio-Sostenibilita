@@ -28,10 +28,10 @@ img { width: 100%; height: auto; }
 
 
 /* PARAGRAFI  */
-/* Stile del testo corrente: colore, dimensione e giustificazione */
+/* Stile del testo corrente: colore, dimensione e tipologia*/
 p { 
     color: #000; 
-    font-size: 25px; 
+    font-size: 18px; 
     /*text-align: justify; */
 }
 
@@ -67,7 +67,7 @@ header li a { font-size: 20px; padding: 10px; }
 #menu-principale li a { 
     color: #c9a96e; 
     margin: 10px; 
-    border: 2px solid #5b7f4cb9;
+    border: 1px solid #b7b3b3;/*colore bordo opzioni menu*/
     border-radius: 8px;
     padding: 2px 6px;
 }
@@ -95,9 +95,9 @@ header li a { font-size: 20px; padding: 10px; }
 /* Cover più piccola usata nelle pagine interne */
 .cover_small { 
     position: relative; 
-    height: 400px; 
+    /*height: 300px;*/
     margin-bottom: 20px;
-    border: 5px solid #5b7f4cb9;
+    border: 3px solid #5b7f4cb9;
     border-radius: 8px; /* angoli arrotondati */  
 }
 
@@ -126,14 +126,22 @@ header li a { font-size: 20px; padding: 10px; }
 /* Usata nella home e nella pagina cantina */
 .grid { display: flex; flex-wrap: wrap; }
 .col-grid { width: 33.33%; padding: 15px; }
+.col-grid p{ font-size: 20px; line-height: 1.2; } /* dimensioni testo */
 
 
-/* GRIGLIA A DUE COLONNE */
-/* Ogni riga della pagina sostenibilità: testo + immagine affiancati */
-.grid-int-sost { display: flex; gap: 25px; margin-bottom: 40px; padding: 20px; }
+/* GRIGLIA A DUE COLONNE PAGINA SOSTENIBILITA' */
+/* testo + immagine affiancati */
+.grid-int-sost { 
+    display: flex; 
+    gap: 25px; 
+    margin-bottom: 40px; 
+    padding: 20px;
+    align-items: center; /* centra le colonne invece di stirarle */
+ }
+
 .grid-int-sost > div { flex: 1; } /* ogni figlio occupa metà spazio */
 .grid-int-sost img { width: 100%; height: auto; } /* immagine adattiva */
-.grid-int-sost p { font-size: 25px; line-height: 1.4; }
+.grid-int-sost p { font-size: 16px; line-height: 1.2; } /* dimensioni testo */
 
 
 /* Sfondo alternato per le righe della pagina sostenibilità */
@@ -155,7 +163,7 @@ header li a { font-size: 20px; padding: 10px; }
     border-radius: 8px; /* angoli arrotondati */
     border: 5px solid #f5b743; /* bordo dorato */
     font-weight: bold; /* testo in grassetto */
-    font-size: 20px; /* dimensione testo */
+    font-size: 18px; /* dimensione testo */
 }
 
 
@@ -168,40 +176,54 @@ footer p { color: #fff; }
 /* MEDIA QUERY  */
 
 /* MOBILE (fino a 767px)  */
-@media (max-width: 767px) {
-    /*Gestione Mobile generale*/
-    .col-grid{ width: 100%; } /* colonne a piena larghezza */
-    h1{ font-size: 25px; } /* dimensioni titolo */
-    h2,h3{ font-size: 20px; } /* dimensioni sottotitoli */
-    .cover img { height: 300px; object-fit: cover; }/* cover ridotta */
-    header li a { font-size: 25px; text-align: left; } /* menu allineato a sinistra */
+@media (max-width: 767px) { 
     #menu-principale li { display: block; padding: 5px ; } /* voci menu una sotto l'altra */
+    header li a { font-size: 25px;} 
+    h1{ font-size: 22px; } /* dimensioni titolo */
+    h2,h3{ font-size: 18px; } /* dimensioni sottotitoli */
+    .cover img { height: 300px; object-fit: cover; }/* cover ridotta */
+    .col-grid{ width: 100%; } /* colonne a piena larghezza */
     footer { background: #333; padding: 10px; }
     footer p,a { color: #fff; font-size: 18px;}
 
-    /*Gestione Mobile per pagina sostenibilità*/
-    .cover_small-int h1 { font-size: 25px; } /* titolo cover interno ridotto */
-    .cover_small-int h2 { font-size: 20px; } /* sottotitolo cover ridotto */
+    /*Gestione Mobile specifica per pagina sostenibilità*/
+    .cover_small{ height: 300px; object-fit: cover; }/* cover ridotta */
+    .cover_small-int h1 { font-size: 22px; } /* titolo cover interno ridotto */
+    .cover_small-int h2,h3 { font-size: 18px; } /* sottotitolo cover ridotto */
     .grid-int-sost { display: block;  } /* colonne in verticale */
+    .grid-int-sost p { font-size: 18px;} /* testo sostenibilità più grande */
 }
 
 /* TABLET (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     h1 { font-size: 30px; } /* titolo medio */
+    header li a { font-size: 30px; } /* menu più grande */
     .col-grid { width: 50%; } /* due colonne invece di tre */
-    header li a { font-size: 25px; } /* menu più grande */
+    /*Gestione specifica per pagina sostenibilità*/
+    .cover_small-int h1 { font-size: 26px; } /* titolo cover interno ridotto */
+    .grid-int-sost p { font-size: 22px; } /* testo sostenibilità più grande */
 }
 
 /* DESKTOP MEDIO (1024px - 1299px) */
 @media (min-width: 1024px) and (max-width: 1299px) {
-    h1 { font-size: 40px; } /* titolo grande */
-    header li a { font-size: 30px; } /* menu più grande */
+    .logo { font-size: 40px; } /* logo più grande */
+    h1 { font-size: 38px; } /* titolo grande */
+    h2, h3 { font-size: 35px; } /* titoli più grandi */
+    header li a { font-size: 35px; } /* menu più grande */
+    /*Gestione specifica per pagina sostenibilità*/
+    .cover_small-int h1 { font-size: 28px; } /* titolo cover interno ridotto */
+    .cover_small-int h2, h3 { font-size: 24px; } /* sottotitoli cover ridotti */
+    .grid-int-sost p { font-size: 26px; } /* testo sostenibilità più grande */
 }
 
 /* DESKTOP GRANDE (1300px e oltre) */
 @media (min-width: 1300px) {
     .logo { font-size: 45px; } /* logo più grande */
+    h1 { font-size: 40px; } /* titolo grande */
     h2, h3 { font-size: 35px; } /* titoli più grandi */
-    header li a { font-size: 35px; } /* menu più grande */
-    .grid-int-sost p { font-size: 28px; line-height: 1.4; } /* testo sostenibilità più grande */
+    header li a { font-size: 40px; } /* menu più grande */
+    /*Gestione specifica per pagina sostenibilità*/
+    .cover_small-int h1 { font-size: 30px; } /* titolo cover interno ridotto */
+    .cover_small-int h2, h3 { font-size: 26px; } /* sottotitoli cover ridotti */
+    .grid-int-sost p { font-size: 28px;} /* testo sostenibilità più grande */
 }
