@@ -24,19 +24,28 @@ body { font-family: 'Times New Roman', Times, serif;;background-color: #878484f8
 
 /*  HEADER  */
 /* Colore e settaggio Barra di navigazione in alto */
-header { background: #333; padding: 10px 20px 10px 20px; width: 100%; }
+header { background: #333; 
+    padding: 10px; 
+    width: 100%; 
+    /* Miglioramenti */
+    text-align: center; /* Centra logo e menu */
+}
+
 header li a { font-size: 20px; padding: 10px; }
 
 
 /*  LOGO  */
 /* Posizionamento Nome azienda all' interno dell' header */
 .logo { 
-    text-align: center; 
-    width: 100%; display: block; 
-    font-size: 35px; 
+    font-size: 20px; 
     letter-spacing: 2px;         /* spaziatura tra lettere */
     color: #c9a96e;              /* stesso oro già usato nel sito */
-    padding: 12px 20px;
+    padding: 12px 14px;
+    display: block; 
+    /* Miglioramenti */
+    margin: 0 auto 10px;     /* Centra e aggiunge spazio sotto */
+    white-space: nowrap;    /* Aggiungi per evitare il wrap */
+         
 }
 
 /* MENU PRINCIPALE  */
