@@ -14,7 +14,9 @@ ul {padding-inline-start: 0;}
 
 /*  BODY  */
 /* font predefinito per tutta la pagina  */
-body { font-family: 'Times New Roman', Times, serif;;background-color: #878484f8 }
+body { font-family: 'Times New Roman', Times, serif;
+    background-color: #878484f8 
+}
 
 
 /* CONTENITORE PRINCIPALE  */
@@ -27,7 +29,6 @@ body { font-family: 'Times New Roman', Times, serif;;background-color: #878484f8
 header { background: #333; 
     padding: 10px; 
     width: 100%; 
-    /* Miglioramenti */
     text-align: center; /* Centra logo e menu */
 }
 
@@ -42,14 +43,13 @@ header li a { font-size: 20px; padding: 10px; }
     color: #c9a96e;              /* stesso oro già usato nel sito */
     padding: 12px 14px;
     display: block; 
-    /* Miglioramenti */
     margin: 0 auto 10px;     /* Centra e aggiunge spazio sotto */
     white-space: nowrap;    /* Aggiungi per evitare il wrap */
          
 }
 
 /* MENU PRINCIPALE  */
-/* Posizionamento Voci del menu e colore */
+/* Posizionamento voci del menu e colore */
 #menu-principale { text-align: center; }
 #menu-principale li { display: inline; font-size: 20px; }
 /*layout delle voci del menu*/
@@ -63,7 +63,7 @@ header li a { font-size: 20px; padding: 10px; }
 
 /* LINK */
 /* Rimozione sottolineatura e settaggio colore dei link */
-a { color: #fff; text-decoration: none; font-size: 25px;}
+a { color: #fff; text-decoration: none;}
 
 
 /*  IMMAGINI  */
@@ -114,19 +114,11 @@ footer p, footer a { color: #fff; font-size: 18px;}
 /* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
     position: relative; 
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
     border-radius: 8px; /* angoli arrotondati */  
     max-height: 700px; /* limita l'altezza massima della cover */
     overflow: hidden; /* nasconde l'eventuale eccesso */
 }
-
-
-/* Immagine che riempie tutta la cover */
-.cover_sost img { 
-    border-radius: 8px; /* angoli arrotondati */  
-    border: 5px solid #5b7f4cb9;        
-}   
-
 
 /* Cover sovrapposta alla cover_sost */
 .cover_sost-int {
@@ -135,9 +127,16 @@ footer p, footer a { color: #fff; font-size: 18px;}
     bottom: 0; /* ancorato in basso al genitore ".cover_sost" */
     left: 0;
     width: 100%;
+    padding: 5px;
     text-align: center;
 }
 
+
+/* Immagine che riempie tutta la cover */
+.cover_sost img { 
+    border-radius: 8px; /* angoli arrotondati */  
+    border: 5px solid #5b7f4cb9;        
+}   
 
 /* GRIGLIA A TRE COLONNE  */
 /* Usata nella home e nella pagina cantina */
@@ -158,7 +157,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
  }
 
 .grid-int-sost > div { flex: 1; } /* ogni figlio occupa metà spazio */
-.grid-int-sost p { font-size: 20px; line-height: 1.2; } /* dimensioni testo */
+.grid-int-sost p { font-size: 20px; line-height: 1.4; } /* dimensioni testo */
 
 
 /* Sfondo alternato per le righe della pagina sostenibilità */
@@ -197,7 +196,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     .col-grid{ width: 100%; } /* colonne a piena larghezza */
 
     /*Gestione Mobile per pagina sostenibilità*/
-    .cover_sost{ height: 300px; object-fit: cover; }/* cover ridotta */
+    .cover_sost img{ height: 300px; object-fit: cover; }/* cover ridotta */
     .grid-int-sost { display: block;} /* colonne in verticale */
 
 }
