@@ -59,7 +59,9 @@ a { color: #fff; text-decoration: none; font-size: 25px;}
 
 /*  IMMAGINI  */
 /* Le immagini occupano tutta la larghezza del loro contenitore */
-img { width: 100%; height: auto; }
+img { width: 100%; 
+    height: 100%; 
+    display: block;}
 
 
 /*  TITOLI  */
@@ -99,16 +101,15 @@ footer p, footer a { color: #fff; font-size: 18px;}
 /* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
     position: relative; 
-    margin-bottom: 20px;
-    border: 5px solid #5b7f4cb9;
+    margin-bottom: 20px; 
     border-radius: 8px; /* angoli arrotondati */  
 }
 
 
-/* Immagine che riempie tutta la cover ridotta */
-.cover_sost img { 
-    width: 100%;  
-    border-radius: 8px; /* angoli arrotondati */            
+/* Immagine che riempie tutta la cover */
+.cover_sost img {  
+    border-radius: 8px; /* angoli arrotondati */  
+    border: 5px solid #5b7f4cb9;        
 }   
 
 
@@ -170,11 +171,12 @@ footer p, footer a { color: #fff; font-size: 18px;}
 
 /* MOBILE (fino a 767px)  */
 @media (max-width: 767px) { 
+    .logo { font-size:25px; } /* logo */
     #menu-principale li { display: block; padding: 5px ; } /* voci menu una sotto l'altra */
-    h1{ font-size: 24px; } /* dimensioni titolo */
-    h2,h3{ font-size: 20px;} /* dimensioni sottotitoli e paragrafi */
-    header li a { font-size: 25px;} 
+    header li a { font-size: 22px;} 
     .cover img { height: 300px; object-fit: cover; }/* cover ridotta */
+    h1{ font-size: 20px; } /* dimensioni titolo */
+    h2,h3{ font-size: 18px;} /* dimensioni sottotitoli e paragrafi */
     .col-grid{ width: 100%; } /* colonne a piena larghezza */
 
     /*Gestione Mobile per pagina sostenibilità*/
