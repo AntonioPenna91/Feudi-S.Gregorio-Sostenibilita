@@ -68,7 +68,8 @@ a { color: #fff; text-decoration: none;}
 
 /*  IMMAGINI  */
 /* Le immagini occupano tutta la larghezza del loro contenitore */
-img { width: 100%; /* Occupa tutta la larghezza del contenitore */
+img {
+     width: 100%; /* Occupa tutta la larghezza del contenitore */
     height: auto; /* Altezza automatica per mantenere le proporzioni */
     object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
 }
@@ -110,7 +111,6 @@ footer p, footer a { color: #fff; font-size: 18px;}
 }
 
 
-
 /* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
     position: relative; 
@@ -125,7 +125,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     background-color: #334a3238; /* sfondo semi-trasparente */
     position: absolute; /* si sovrappone all'immagine */
     bottom: 0; /* ancorato in basso al genitore ".cover_sost" */
-    left: 0;
+    left: 0; /
     width: 100%;
     padding: 5px;
     text-align: center;
@@ -143,10 +143,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
 .grid { display: flex; flex-wrap: wrap; }
 .col-grid { width: 33.33%; padding: 15px; }
 
-
-
-
-/* GRIGLIA PAGINA SOSTENIBILITA' */
+/* GRIGLIA A DUE COLONNE PAGINA SOSTENIBILITA' */
 /* testo + immagine affiancati */
 .grid-int-sost { 
     display: flex; 
