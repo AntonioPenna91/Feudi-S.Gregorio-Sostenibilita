@@ -3,13 +3,12 @@
 
 /*  RESET BASE  */
 /* Azzera margini e imposta il box model per tutti gli elementi */
-* { box-sizing: border-box; }
-body, html { padding: 0; margin: 0; }
+* { box-sizing: border-box; } /* Applica il box model border-box a tutti gli elementi */
+body, html { padding: 0; margin: 0; } /* Rimuove margini e padding predefiniti del browser */
 
 
 /* RESET LISTE */
-/* Cambia 0 con il padding di default */
-ul {padding-inline-start: 0;}
+ul {padding-inline-start: 0;} /* Cambia 0 con il padding di default */
 
 
 /*  BODY  */
@@ -32,7 +31,7 @@ header { background: #333;
     text-align: center; /* Centra logo e menu */
 }
 
-header li a { font-size: 20px; padding: 10px; }
+header li a { font-size: 20px; padding: 10px; } /* Dimensione testo e spaziatura interna dei link nell'header */
 
 
 /*  LOGO  */
@@ -41,9 +40,8 @@ header li a { font-size: 20px; padding: 10px; }
     font-size: 20px; 
     letter-spacing: 2px;         /* spaziatura tra lettere */
     color: #c9a96e;              /* stesso oro già usato nel sito */
-    padding: 12px 14px;
-    display: block; 
-    margin: 0 auto 10px;     /* Centra e aggiunge spazio sotto */
+    padding: 12px 14px; /* Spazio interno attorno al testo del logo */
+    display: block; /* Il logo occupa tutta la larghezza disponibile come blocco */
     white-space: nowrap;    /* Aggiungi per evitare il wrap */
          
 }
@@ -51,16 +49,16 @@ header li a { font-size: 20px; padding: 10px; }
 
 /* MENU PRINCIPALE  */
 /* Posizionamento voci del menu e colore */
-#menu-principale { text-align: center; }
-#menu-principale li { display: inline; font-size: 20px; }
+#menu-principale { text-align: center; } /* Centra le voci del menu all'interno del contenitore */
+#menu-principale li { display: inline; font-size: 20px; } /* Voci del menu allineate in riga con dimensione testo definita */
 
 /*layout delle voci del menu*/
 #menu-principale li a { 
     color: #b7b3b3;
-    margin: 10px; 
+    margin: 10px; /* Spaziatura tra le voci del menu */
     border: 1px solid #b7b3b3;
     border-radius: 8px;
-    padding: 2px 6px;
+    padding: 2px 6px; /* Spazio interno di ogni voce del menu */
 }
 
 /* LINK */
@@ -104,10 +102,10 @@ footer p, footer a { color: #fff; font-size: 18px;}
 
 /* Cover sovrapposta alla cover principale */
 .cover-int {
-    background-color: #394f1207; /* sfondo semi-trasparente */
+    background-color: #394f121a; /* sfondo semi-trasparente */
     position: absolute; /* esce dal flusso normale del documento e si sovrappone all'immagine */
     bottom: 0; /* ancorato in basso al genitore ".cover" */
-    left: 0;
+    left: 0; /* ancorato a sinistra al genitore ".cover" */
     width: 100%;
     padding: 5px;
     text-align: center;
@@ -131,7 +129,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     left: 0;
     width: 100%;
     padding: 5px;
-    text-align: center;
+    text-align: center; /* centra il testo sovrapposto */
 }
 
 
@@ -144,7 +142,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
 
 /* GRIGLIA A TRE COLONNE  */
 /* Usata nella home e nella pagina cantina */
-.grid { display: flex; flex-wrap: wrap; }
+.grid { display: flex; flex-wrap: wrap; } /* Contenitore flessibile con a capo automatico delle colonne */
 .col-grid { width: 33.33%; padding: 15px; }
 
 
