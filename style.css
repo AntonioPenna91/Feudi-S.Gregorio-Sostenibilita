@@ -48,10 +48,12 @@ header li a { font-size: 20px; padding: 10px; }
          
 }
 
+
 /* MENU PRINCIPALE  */
 /* Posizionamento voci del menu e colore */
 #menu-principale { text-align: center; }
 #menu-principale li { display: inline; font-size: 20px; }
+
 /*layout delle voci del menu*/
 #menu-principale li a { 
     color: #b7b3b3;
@@ -69,7 +71,7 @@ a { color: #fff; text-decoration: none;}
 /*  IMMAGINI  */
 /* Le immagini occupano tutta la larghezza del loro contenitore */
 img {
-     width: 100%; /* Occupa tutta la larghezza del contenitore */
+    width: 100%; 
     height: auto; /* Altezza automatica per mantenere le proporzioni */
     object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
 }
@@ -99,9 +101,10 @@ footer p, footer a { color: #fff; font-size: 18px;}
     overflow: hidden; /* nasconde l'eventuale eccesso */
 }
 
+
 /* Cover sovrapposta alla cover principale */
 .cover-int {
-    background-color: #394f122c; /* sfondo semi-trasparente */
+    background-color: #394f1207; /* sfondo semi-trasparente */
     position: absolute; /* esce dal flusso normale del documento e si sovrappone all'immagine */
     bottom: 0; /* ancorato in basso al genitore ".cover" */
     left: 0;
@@ -113,11 +116,11 @@ footer p, footer a { color: #fff; font-size: 18px;}
 
 /* COVER PAGINA SOSTENIBILITA' */
 .cover_sost { 
-    position: relative; 
-    margin-bottom: 10px; 
+    position: relative; /* crea un nuovo contesto di posizionamento */
+    margin-bottom: 30px; 
     border-radius: 8px; /* angoli arrotondati */  
     max-height: 700px; /* limita l'altezza massima della cover */
-    overflow: hidden; /* nasconde l'eventuale eccesso */
+    overflow: hidden;  /* nasconde l'eventuale eccesso */
 }
 
 /* Cover sovrapposta alla cover_sost */
@@ -125,7 +128,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     background-color: #334a3238; /* sfondo semi-trasparente */
     position: absolute; /* si sovrappone all'immagine */
     bottom: 0; /* ancorato in basso al genitore ".cover_sost" */
-    left: 0; /
+    left: 0;
     width: 100%;
     padding: 5px;
     text-align: center;
@@ -135,13 +138,15 @@ footer p, footer a { color: #fff; font-size: 18px;}
 /* Immagine che riempie tutta la cover */
 .cover_sost img { 
     border-radius: 8px; /* angoli arrotondati */  
-    border: 5px solid #5b7f4cb9;        
+    border: 5px solid #5b7f4cb9;   
 }   
+
 
 /* GRIGLIA A TRE COLONNE  */
 /* Usata nella home e nella pagina cantina */
 .grid { display: flex; flex-wrap: wrap; }
 .col-grid { width: 33.33%; padding: 15px; }
+
 
 /* GRIGLIA A DUE COLONNE PAGINA SOSTENIBILITA' */
 /* testo + immagine affiancati */
@@ -152,6 +157,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     padding: 20px;
     align-items: center; /* centra le colonne invece di stirarle */
  }
+
 
 .grid-int-sost > div { flex: 1; } /* ogni figlio occupa metà spazio */
 .grid-int-sost p { font-size: 20px; line-height: 1.4; } /* dimensioni testo */
@@ -195,8 +201,8 @@ footer p, footer a { color: #fff; font-size: 18px;}
     /*Gestione Mobile per pagina sostenibilità*/
     .cover_sost img{ height: 300px; object-fit: cover; }/* cover ridotta */
     .grid-int-sost { display: block;} /* colonne in verticale */
-
 }
+
 
 /* TABLET (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -210,6 +216,7 @@ footer p, footer a { color: #fff; font-size: 18px;}
     .grid-int-sost p { font-size: 22px; } /* testo sostenibilità più grande */
 }
 
+
 /* DESKTOP MEDIO (1024px - 1299px) */
 @media (min-width: 1024px) and (max-width: 1299px) {
     .logo { font-size:45px; } /* logo più grande */
@@ -222,8 +229,8 @@ footer p, footer a { color: #fff; font-size: 18px;}
 
     /*Gestione specifica per pagina sostenibilità*/
     .grid-int-sost p { font-size: 26px; } /* testo sostenibilità più grande */
-
 }
+
 
 /* DESKTOP GRANDE (1300px e oltre) */
 @media (min-width: 1300px) {
